@@ -1,4 +1,4 @@
-#Dice Roller
+## Dice Roller
 
 This is a simple dice roller that runs using Vue.js
 
