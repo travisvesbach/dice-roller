@@ -5,16 +5,7 @@ const app = new Vue({
 			feed: []
 	},
 	created() {
-		this.dice = [
-				{ die: 4, rollTimes: 1, modifier: 0 },
-				{ die: 6, rollTimes: 1, modifier: 0 },
-				{ die: 8, rollTimes: 1, modifier: 0 },
-				{ die: 10, rollTimes: 1, modifier: 0 },
-				{ die: 12, rollTimes: 1, modifier: 0 },
-				{ die: 20, rollTimes: 1, modifier: 0 },
-				{ die: 100, rollTimes: 1, modifier: 0 },
-			]
-
+		this.reset();
 	},
 	methods: {
 		roll(die) {
@@ -28,10 +19,9 @@ const app = new Vue({
 			}
 			var modifiedTotal = total + die.modifier;
 			var resultString = 'You rolled ' + die.rollTimes + 'd' + die.die +' resulting in [' + result + '] for ' + total + ' + ' + die.modifier + ' for a total of ' + modifiedTotal + '.';
-			if(this.feed.length == 10) {
+			if(this.feed.length >= 10) {
 				this.feed.shift();
 			}
-			console.log(this.initialDice);
 			this.feed.push(resultString);
 		},
 		reset() {
