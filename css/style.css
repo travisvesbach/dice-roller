@@ -5,22 +5,4 @@ input {
 	border: none;
 	padding: 0;
 }
-.footer {
-	margin: 100px auto auto auto;
-}
 
-.footer p {
-	display: inline-block;
-	text-align: left;
-	float: left;
-}
-
-.footer a {
-	padding: 10px;
-	text-decoration: none;
-	color: inherit;
-	margin-left: 20px;
-	border-radius: 5px;
-	background-color: lightgrey;
-	float: right;
-}
