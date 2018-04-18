@@ -20,9 +20,9 @@ const app = new Vue({
 			var modifiedTotal = total + die.modifier;
 			var resultString = 'You rolled ' + die.rollTimes + 'd' + die.die +' resulting in [' + result + '] for ' + total + ' + ' + die.modifier + ' for a total of ' + modifiedTotal + '.';
 			if(this.feed.length >= 10) {
-				this.feed.shift();
+				this.feed.pop();
 			}
-			this.feed.push(resultString);
+			this.feed.unshift(resultString);
 		},
 		reset() {
 			this.dice = [
